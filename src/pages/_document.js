@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <script defer src="/script.js"></script>
+          <script defer src="/ife/server.js"></script>
         </Head>
         <body>
           <Main />

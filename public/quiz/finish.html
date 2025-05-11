@@ -1,0 +1,19 @@
+<meta
+  http-equiv="Cache-Control"
+  content="no-cache, no-store, must-revalidate"
+/>
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<h1>Quiz finished</h1>
+<p>You got <span id="number">0</span> questions right, and have unlocked two new images!</h1>
+<button onclick="location.assign('/gallery')">Go to gallery</button><br>
+<img src="/quiz/quiz.jpg" alt="Quiz image" width="300">
+<img src="/quiz/itsquiztime.webp" width="200" alt="Image that says quiz time">
+<script>
+    let n = document.getElementById('number')
+    let p = new URLSearchParams(location.search)
+    let correct = p.get('correct')
+    n.textContent = correct
+    localStorage.setItem('gallery:quiz', 'mhm')
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+  <title>2048 Game</title>
+</head>
+<body>
+  <h1>You unlocked one new image!!!!</h1>
+  <p>You didn't win, but it's really hard to win 2048 anyway, so you still get one of the two images!!!</p>
+  <button onclick="location.assign('/gallery')">go to gallery</button>
+  <img src="2048.png" alt="2048" width="300">
+  <script>
+    localStorage.setItem('gallery:2048lose', 'mhm')
+  </script>
+</body>
+</html>

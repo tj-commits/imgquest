@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link href="./styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        .share-tech-mono-regular {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+h1{
+    font-size: 3.5em;
+}
+.rainbow-text {
+  background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+  text-align: center;
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  animation: rainbow 8s ease infinite;
+}
+
+@keyframes rainbow { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 50%}
+}
+        button {
+            padding: 10px;
+            border: none;
+            outline: none;
+            background: #333;
+            color: white;
+            font-family: sans-serif;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            /*margin-right: 5px;*/
+            min-width: 5em;
+        }
+        
+        
+        
+        
+        
+        button:hover {
+            background: #5a5a5a
+        }
+
+        #top-sect {
+            background: #f7ffad;
+            padding: 5px !important;
+        }
+        #botom-sect {
+            padding: 5px !important; 
+        }
+
+        hr{
+            padding: 0;
+            margin: 0;
+        }
+
+        #quests p {
+            padding: 4.3px;
+        }
+
+</style>
+	<title>ImageQuest</title>
+</head>
+
+<body style="margin: 0 !important;padding:0 !important; font-family: 'SUSE', sans-serif;"> <hr>
+    <div id="top-sect"
+    	>	<br><button onclick="location.assign('https://rafdo.vercel.app/games/')">Back to Rafdo Games &larr;</button>
+    <button onclick="location.assign('https://www.rafdo.vercel.app')">Back to the Rafdo homepage &larr;</button>
+<button onclick="location.assign('/')">Back to the ImageQuest title screen &larr;</button>
+    <h1 style="font-weight: bold;" class="share-tech-mono-regular">ImageQuest</h1>
+    <button
+      class="btn btn-outline-dark"
+      onclick="location.assign('/gallery')"
+    >
+      Gallery
+    </button>
+    <button
+      class="btn btn-outline-dark"
+      onclick="location.assign('/how-to-play')"
+    >
+      How to Play
+    </button>
+    <button
+      class="btn btn-outline-dark"
+      onclick="location.assign('/settings')"
+    >
+      Settings
+    </button>
+    <button
+      class="btn btn-outline-dark"
+      id="reset"
+    >
+      Reset
+    </button><br><br><br></div>
+    <hr>
+    <div id="botom-sect">
+    <h2>Quests</h2>
+    <div id="quests">
+    <p id="ohman">
+      <a id="aplcat" href="/dragonfly_eyeballs/"
+        >Quest #1: DragonFly Eyeballs
+        <span id="plcat" class="green"
+          >+2 New images can be found on this quest.</span
+        ></a
+      >
+    </p>
+    <p id="idpla">
+      <a id="apla" href="/CLICKIT/"
+        >Quest #2: CLICKIT
+        <span id="plrar" class="green"
+          >+2 New images can be found on this quest.</span
+        ></a
+      >
+    </p>
+    <p id="mis301">
+      <a id="aplm" href="/mission301/"
+        >Quest #3: Eight Match
+        <span id="plm" class="green"
+          >+1 New image can be found on this mission.</span
+        ></a
+      >
+    </p>
+    <p id="questb">
+      <a id="aplb" href="/bruh/lol.html"
+        >Quest #4: Surprise
+        <span id="plb" class="green"
+          >+3 New images can be found on this quest.</span
+        ></a
+      >
+    </p>
+    <p id="cdeasy">
+      <a id="aplcde" href="/ColorDifference/easy.html"
+        >Quest #5: Color Difference (Easy)
+        <span id="plcde" class="green"
+          >+1 New image can be found on this quest.</span
+        ></a
+      >
+    </p>
+    <p id="cdhard">
+      <a id="aplcdh" href="/ColorDifference/hard.html"
+        >Quest #6: Color Difference (Hard)
+        <span id="plcdh" class="green"
+          >+1 New image can be found on this quest.</span
+        ></a
+      >
+    </p>
+    <p id="ctc">
+      <a id="aplctc" href="/clickthecat/"
+        >Quest #7: clickthecat (orthedog)
+        <span id="plctc" class="green"
+          >+10 New images can be found on this quest!</span
+        ></a
+      >
+    </p>
+    <p id="sub">
+      <a id="aplsub" href="/sub/"
+        >Quest #8: Subscriebe Plz
+        <span id="plsub" class="green"
+          >+1 New image can be found on this quest!</span
+        ></a
+      >
+    </p>
+    <p id="kwiz">
+      <a id="aplkwiz" href="/quiz/screen"
+        >Quest #9: Quiz
+        <span id="plkwiz" class="green"
+          >+2 New images can be found on this quest!</span
+        ></a
+      >
+    </p>
+    <p id="haqx">
+      <a id="aplhaqx" href="/obfuscation/"
+        >Quest #10: Obfuscation
+        <span id="plhaqx" class="green"
+          >+2 New images can be found on this quest!</span
+        ></a
+      >
+    </p><!--
+    <p id="id2048">
+      <a id="apl2048" href="/2048/"
+        >Quest #11: 2048
+        <span id="pl2048" class="green"
+          >+2 New images can be found on this quest!</span
+        ></a
+      >
+    </p>-->
+    </div>
+    <p id="youvecompleted" style="word-wrap: pretty;"></p>
+    <h3 class="rainbow-text">BONUS QUESTS</h3>
+    <p id="unlbqmsg" style="word-wrap: pretty;">
+      To unlock bonus quests, first you must complete all regular quests. Bonus quests are really hard quests that most people won't waste their time on. There's currently only one though.
+    </p>
+    <div id="bonusquests" style="display: none">
+      <!--<p id="feedback">
+        <a id="aplfeed" href="/66b/"
+          >Bonus Quest #1: Feedback 66B
+          <span id="plfeedback" class="green"
+            >+1 New image can be found on this quest.</span
+          ></a
+        >
+      </p>--> <!--uncomment for feedback 66b quest-->
+      <p id="extreme">
+        <a id="aplextreme" href="/hard/"
+          >Bonus Quest #1: The Hardest Most Extremely Hardly Amazingly...
+          <span id="plextreme" class="green">
+              +1 New image can be found on this quest.</span></a
+        >
+      </p>
+    </div></div>
+    
+    <script defer>
+
+        let reset = document.getElementById('reset')
+
+        reset.addEventListener('click', () => {
+            const shouldIReset = prompt('Are you sure you want to reset ImageQuest? This will make all quests undone and your gallery will be empty. Type "reset" to continue.')
+            if (shouldIReset === "reset") {
+                localStorage.clear();
+                location.reload()
+            }
+        })
+      const YES_D = "YES! :D"
+      let lastCheckCompleted = true
+      localStorage.setItem("imagequest:completedallquests", null)
+
+      function entr(string, aplx, plx, x, last = "nope") {
+        if (localStorage.getItem(string) != null) {
+            document.getElementById(plx).classList.add('finished')
+            document.getElementById(x).innerHTML += '<span class="locked"> Already completed. No more images can be obtained</span>'
+            if (last === YES_D) localStorage.setItem("imagequest:completedallquests", YES_D) 
+        } else {
+        if (lastCheckCompleted === false) {
+          document.getElementById(aplx).removeAttribute("href")
+          document.getElementById(plx).classList.add("finished")
+          document.getElementById(x).innerHTML +=
+            '<span class="locked"> Locked</span>'
+        }
+
+        lastCheckCompleted = false
+      }
+
+      }
+      //channel/UCwuZiSR3h-UC0MvI_mVDBXQ
+
+      entr('gallery:toe', 'aplcat', 'plcat', 'ohman')
+      entr('gallery:crickit', 'apla', 'plrar', 'idpla')
+      entr('eight', 'aplm', 'plm', 'mis301')
+      entr('gallery:bruhhh', 'aplb', 'plb', 'questb')
+      entr('gallery:colorDifferenceEasy', 'aplcde', 'plcde', 'cdeasy')
+      entr('gallery:colorDifferenceHard', 'aplcdh', 'plcdh', 'cdhard')
+      entr('gallery:thekittycollection', 'aplctc', 'plctc', 'ctc')
+      entr('gallery:subbed', 'aplsub', 'plsub', 'sub')
+      entr('gallery:quiz', 'aplkwiz', 'plkwiz', 'kwiz')
+      entr('gallery:hacker', 'aplhaqx', 'plhaqx', 'haqx', YES_D)
+
+      /*if (localStorage.getItem("gallery:2048lose") != null) {
+        document.getElementById("id2048").innerHTML +=
+          '<span class="locked"> Already completed, but you lost. 1 more image can still be obtained, but you can start the next quest anyway</span>'
+          document.getElementById("pl2048").innerText = '+1 new image can be found on this quest!'
+
+          if (localStorage.getItem("gallery:2048win") != null) {
+        document.getElementById("pl2048").classList.add("finished")
+        document.getElementById("id2048").querySelector('.locked').innerText = 'Already completed. No more images can be obtained'
+      }
+
+            localStorage.setItem("imagequest:completedallquests", YES_D) // this quest is the last quest so we enable completedallquests
+      } else {
+        if (lastCheckCompleted === false) {
+          document.getElementById("apl2048").removeAttribute("href")
+          document.getElementById("pl2048").classList.add("completed")
+          document.getElementById("id2048").innerHTML +=
+            '<span class="locked"> Locked</span>'
+        }
+
+        lastCheckCompleted = false
+      }*/
+
+
+        let lastBonusQuestCheckCompleted = true
+      if (localStorage.getItem("imagequest:completedallquests") === YES_D) {
+        let bonusQuestsDiv = document.querySelector("#bonusquests")
+        const unlockedBonusQuestsMessage = document.querySelector("#unlbqmsg")
+        console.log(bonusQuestsDiv)
+        bonusQuestsDiv.style.display = "block"
+        /*entr('gallery:feedback', 'aplfeed', 'plfeedback', 'feedback')*/ // uncomment for feedback 66b quest
+        entr('gallery:extremelyhard', 'aplextreme', 'plextreme', 'extreme')
+
+        lastBonusQuestCheckCompleted = false
+
+        document.getElementById("youvecompleted").innerHTML =
+          "You've completed all the quests (and maybe even all the bonus quests!) for now. If you're bored, try submitting an idea for a new quest by sending an email to thefoxjones@gmail.com with your idea!"
+      }
+    </script>
+  </body>
+</html>

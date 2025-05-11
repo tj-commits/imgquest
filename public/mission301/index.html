@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="windows-1252" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+
+    <script src="/ife/client.js"></script>
+<meta http-equiv="Expires" content="0" />
+    
+    <style>
+        body {
+            z-index: 99999999999999999;
+        }
+        #num {
+            font-size: 3em;
+        }
+    </style>
+    <title>ImageQuest Eight Match</title>
+  </head>
+  <body>
+      
+      <h1 font-size="50px !important">EIGHT MATCH</h1>
+      <button id="giveup">give up</button><Br>
+      <p>Objective: Click "eight" when the number is <span id="number">8</span>.</p>
+      <button id="what">eight</button><Br>
+      <p id="num">2</p>
+      <div id="status"></div>
+      <button id="reset">Reset</button>
+      <script>
+          
+
+          const giveup = document.getElementById("giveup")
+          giveup.style.display = 'none'
+    
+    setTimeout(function() {
+        giveup.style.display = 'block'
+    }, 30000)
+          let interval = setInterval(() => {
+              function randomNumberBetween(min,max) {
+                return Math.floor(Math.random() * (max - min + 1) + min)
+              }
+              document.getElementById("num").innerText = randomNumberBetween(0,8)
+              document.getElementById("what").onclick = () => {
+                clearInterval(interval)
+                if (document.getElementById("num").innerText == "8") {
+                    location.assign("eight.html")
+                } else {
+                    document.getElementById("status").innerHTML = "<img src='/CLICKIT/LOOZ.png' alt='you lose' width=86 />"
+                }
+              }
+          }, 100)
+          document.getElementById("reset").onclick = function() {
+              location.reload()
+          }
+      </script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
-import Grid from "./Grid.js"
-import Tile from "./Tile.js"
+import Grid from "/2048/Grid.js"
+import Tile from "/2048/Tile.js"
 
 const gameBoard = document.querySelector("#game-board")
 
@@ -63,7 +63,7 @@ async function handleInput(e) {
   if (!canMoveUp() && !canMoveDown() && !canMoveLeft() && !canMoveRight()) {
     newTile.waitForTransition(true).then(() => {
       alert('you lose')
-      location.assign('./lose.html')
+      location.assign('/2048/lose.html')
     })
     return
   }
@@ -95,7 +95,7 @@ function slideTiles(cells) {
         if (cell.tile == null) continue
         if (cell.tile.tileElement.textContent === '2048') {
           alert('You win!!!!')
-          location.assign('win.html')
+          location.assign('/2048/win.html')
         }
         let lastValidCell
         for (var j = i - 1; j >= 0; j--) {

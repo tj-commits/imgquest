@@ -25,7 +25,7 @@
 <body style="background-color: goldenrod">
 	<h2>Try to memorize the pets and their names. <span id="timer">20</span> seconds remaining</h2>
     <p>Each name is below the image</p>
-    <button onclick="location.replace('./round1/')">I think I've looked at them enough</button>
+    <button onclick="location.replace('/clickthecat/round1/')">I think I've looked at them enough</button>
 	<figure>
 		<img src="/petimages/marty.jpg" alt="marty" class="petimage" width="135"/>
   <figcaption>Marty</figcaption>
@@ -96,7 +96,7 @@
         let timer = 20
         setInterval(() => {
             if (timer === 0) {
-                location.replace('./round1/')
+                location.replace('/clickthecat/round1/')
             } else {
             timer = timer - 1
             timerElement.innerText = timer.toString()

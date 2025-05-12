@@ -116,7 +116,7 @@ function selectAnswer(e) {
       let message = `${questionsAnsweredCorrect.toString()} out of ${
         shuffledQuestions.length
       }`
-      location.assign("./finish.html?correct=" + message)
+      location.assign("/quiz/finish.html?correct=" + message)
     })
   }
 

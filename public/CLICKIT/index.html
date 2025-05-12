@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
-
-    <script src="/ife/client.js"></script>
 <meta http-equiv="Expires" content="0" />
     <title>ImageQuest CLICKIT</title>
     <style>
@@ -28,12 +26,12 @@
 }
     </style>
   </head>
-  <body style="background-image: url('./CRICKIT.png'); background-blend-mode: multiply">
+  <body style="background-image: url('/CLICKIT/CRICKIT.png'); background-blend-mode: multiply">
   <p><strong>CLICKIT</strong></p>
-  <button id="giveup" onclick="localStorage.setItem('gallery:crickit', 'mhm');localStorage.setItem('gallery:what', 'mhm');;location.assign('./uwot.html')">i give up</button>
+  <button id="giveup" onclick="localStorage.setItem('gallery:crickit', 'mhm');localStorage.setItem('gallery:what', 'mhm');;location.assign('/dragonfly_eyeballs/uwot.html')">i give up</button>
     <button
       id="mole"
-      onclick="localStorage.setItem('gallery:crickit', 'mhm');localStorage.setItem('gallery:what', 'mhm');location.assign('uwot.html')"
+      onclick="localStorage.setItem('gallery:crickit', 'mhm');localStorage.setItem('gallery:what', 'mhm');location.assign('/dragonfly_eyeballs/uwot.html')"
     
     >
       <strong>CLICK ME</strong>
@@ -43,6 +41,8 @@
     // Thanks to Joe Pea on JSFiddle for writing the original script!! (which i modified and added stuff to)
     const msg = "Tabbing over and pressing the button will not work. If you are keyboard only, wait 30 seconds until the give up button appears, then tab over to it. Tabbing will be enabled again. The give up button just lets you finish the quest anyway. Click this message to close it."
      let mole = $("#mole")
+
+     var NINE = 9
      
  let molereal = document.querySelector('#mole')
  let howManyTimesPressedTab = 0
@@ -57,7 +57,7 @@ $(document).ready(function() {
 
     mole.on('mouseenter', nope)
     mole.on('click', function() {
-        location.assign('./uwot.html')
+        location.assign('/CLICKIT/uwot.html')
     })
 
     molereal.addEventListener('focus', () => {
@@ -80,7 +80,7 @@ function nope() {
 }
 
 function stopTab(event) {
-if (event.keyCode == 9) {
+if (event.keyCode == NINE) {
     event.preventDefault()
     console.log('Nope')
 

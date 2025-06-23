@@ -44,6 +44,10 @@
                 return Math.floor(Math.random() * (max - min + 1) + min)
               }
               document.getElementById("num").innerText = randomNumberBetween(0,8)
+              document.querySelector('#giveup').onclick = function () {
+
+                    location.assign("/mission301/eight.html")
+              }
               document.getElementById("what").onclick = () => {
                 clearInterval(interval)
                 if (document.getElementById("num").innerText == "8") {

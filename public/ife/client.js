@@ -51,3 +51,7 @@ if (location.pathname.endsWith('.html')) {
 }
 if (location.href.endsWith('index')) {
 }
+
+if (location.href.endsWith('quiz')) {
+  location.replace('/quiz/index')
+}

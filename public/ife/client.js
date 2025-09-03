@@ -55,3 +55,6 @@ if (location.href.endsWith('index')) {
 if (location.href.endsWith('quiz')) {
   location.replace('/quiz/index')
 }
+if (location.href.endsWith('quiz')) {
+  location.replace('/quiz/index')
+}

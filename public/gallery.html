@@ -161,8 +161,8 @@ button {
 
         var cat = document.getElementById('cat')
         let toeCensored = false
-      function check(nameofimage) {
-        return localStorage.getItem("gallery:" + nameofimage) != null
+      function check(nameofimage, no_GallerY_Prefx) {
+        return localStorage.getItem(no_GallerY_Prefx ?"" : "gallery:" + nameofimage) != null
       }
       if (!check("cute-cat")) {
         cat.remove()
@@ -217,7 +217,7 @@ button {
         console.log("crickit")
         ///handleCricket(crickiet897)
       }
-      if (localStorage.getItem("eight") != null) {
+      if (check("eight", true)) {
         var you = document.createElement("img");
         you.src = "/mission301/eight.jpeg"
         document.body.append(you)

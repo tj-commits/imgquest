@@ -242,6 +242,15 @@ h1{
       let lastCheckCompleted = true
       localStorage.setItem("imagequest:completedallquests", null)
 
+
+      // EXPLANATION
+      // entr: it checks whether a quest is completed, and if it is, it makes it show what it should bee
+      // arguments:
+      // string: the name of the localstorage entry for the quest
+      // aplx: The <a> element for the quest.
+      // plx: The <span> element in the quest
+      // x: the <p> that wraps the <a> element
+      // last: is it the last quest, can be "nope" or the YES_D
       function entr(string, aplx, plx, x, last = "nope") {
         if (localStorage.getItem(string) != null) {
             document.getElementById(plx).classList.add('finished')
@@ -260,6 +269,8 @@ h1{
 
       }
       //channel/UCwuZiSR3h-UC0MvI_mVDBXQ
+
+
 
       entr('gallery:toe', 'aplcat', 'plcat', 'ohman')
       entr('gallery:crickit', 'apla', 'plrar', 'idpla')

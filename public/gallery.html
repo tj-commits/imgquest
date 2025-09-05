@@ -160,11 +160,12 @@ button {
 
 
         var cat = document.getElementById('cat')
+        cat.style.cursor = 'pointer'
         let toeCensored = false
-      function check(nameofimage, no_GallerY_Prefx) {
-        return localStorage.getItem(no_GallerY_Prefx ?"" : "gallery:" + nameofimage) != null
+      function check(nameofimage) {
+        return localStorage.getItem(nameofimage) != null
       }
-      if (!check("cute-cat")) {
+      if (!check("gallery:cute-cat")) {
         cat.remove()
       }
       if (localStorage.getItem('settingid:toe') === "1") {
@@ -172,7 +173,7 @@ button {
           toe.src = "/dragonfly_eyeballs/gross foot.jpg"
           toeCensored = true
       }
-      if (!check("toe")) {
+      if (!check("gallery:toe")) {
         
         var toe = document.querySelector('[data-toe]')
         toe.remove()
@@ -192,14 +193,14 @@ button {
             easteregg.style.display = 'block'
         }
 
-      if (check("what")) {
+      if (check("gallery:what")) {
         let wot = document.createElement("img")
         wot.src = "/CLICKIT/uwot.png"
         document.body.append(wot)
         console.log("whattt")
       }
       
-      if (check("crickit")) {
+      if (check("gallery:crickit")) {
         let crickiet897 = document.createElement("img")
         crickiet897.src = "/CLICKIT/CRICKIT.png"
         crickiet897.style.cursor="pointer"
@@ -208,11 +209,6 @@ button {
 
         document.body.append(crickiet897)
     var thecricket = document.getElementById('crickettt')
-         thecricket.onclick = function() {
-             console.log('crick crick')
-         }
-            /*var audio = new Audio('gallerymedia/crickets.mp3')
-        audio.play();*/
         
         console.log("crickit")
         ///handleCricket(crickiet897)
@@ -223,24 +219,20 @@ button {
         document.body.append(you)
         console.log("eight-ified")
       }
-      if (check("bruhhh")) {
+      if (check("gallery:bruhhh")) {
           var kanyewest = document.createElement('img');
-          kanyewest.src = "https://media.tenor.com/-YA82G77g3IAAAAC/bruh-gpo.gif"
-          kanyewest;
+          kanyewest.src = "/bruh/kanye-west.gif"
           kanyewest.style.cursor="pointer"
-          
-        kanyewest.addEventListener('click', function(){
-            console.log('bruh click')
-        var audio = new Audio('gallerymedia/bruh.mp3')
-        audio.play();
-        })
+
           document.body.append(kanyewest)
           console.log('ULTRA-LEVEL: BUEURRUURRHRURGRRHHHH')
+
       }
-      if (check("coolbeluga")) {
+      if (check("gallery:coolbeluga")) {
           var beluga = document.createElement('img');
           beluga.src = "/bruh/beluga-cat-meme-discord.gif"
           beluga;
+          beluga.style.cursor = 'pointer'
           document.body.append(beluga)
           console.log('mewo')
           beluga.onclick = () => {
@@ -248,21 +240,22 @@ button {
               audio.play()
           }
       }
-      if (check("colorDifferenceEasy")) {
+      if (check("gallery:colorDifferenceEasy")) {
           var easy = document.createElement('img');
           easy.src = "/ColorDifference/Easy.jpg"
           document.body.append(easy)
           console.log('easy color difference')
       }
       console.log('e')
-       if (check("colorDifferenceHard")) {
+       if (check("gallery:colorDifferenceHard")) {
           var hard = document.createElement('img')
           hard.src = "/ColorDifference/Hard.jpg"
           document.body.append(hard)
           console.log('hard color difference')
       }
      
-      if (check('thekittycollection')) {
+      if (check('gallery:thekittycollection')) {
+        console.log('me')
           var bitsy = document.createElement('img')
           var george = document.createElement('img')
           var daorangecat = document.createElement('img') //ginger
@@ -288,13 +281,21 @@ button {
               bitsy, george, daorangecat, dabigspraya, dagoose, damartmart, daminniekittie, daernesto, feebs, dadawg
           ]
           array.forEach((catordog) => {
+
+            catordog.style.cursor='pointer'
+            if (catordog == dadawg) {
+              catordog.classList.add('dog')
+            } else {
+
+            catordog.classList.add('kittycatkittycatkitty')
+            }
               catordog.setAttribute('width', '200')
               document.body.append(catordog)
           })
           console.log('meow times 9. woof times 1')
       }
 
-      if (check('subbed')) {
+      if (check('gallery:subbed')) {
         let xxaxxexXaxxexIxaxe = document.createElement('img')
         xxaxxexXaxxexIxaxe.src = "/sub/chanelbaner.jpg"
         xxaxxexXaxxexIxaxe.width = '500'
@@ -302,7 +303,7 @@ button {
         console.log('Xxe uxex xax xuxxxxixex.')
       }
 
-      if(check('quiz')) {
+      if(check('gallery:quiz')) {
           let quizimage1 = document.createElement('img')
           quizimage1.src = "/quiz/quiz.jpg"
           //quizimage1.width = 300
@@ -315,7 +316,7 @@ button {
       }
 
 
-    if (check('hacker')) {
+    if (check('gallery:hacker')) {
         var _101001010 = document.createElement('img')
         _101001010.src = "/obfuscation/hackercode.jpg"
         _101001010.width = 500
@@ -323,7 +324,7 @@ button {
         console.log('Fornite skin changer fr33 robuks hacker virus rogue trick')
     }
 
-      if (check("rollwithitbru")) {
+      if (check("gallery:rollwithitbru")) {
           var astley = document.createElement('img')
           astley.src = "/obfuscation/rick-roll-deal-with-it.gif"
           document.body.append(astley)
@@ -331,7 +332,7 @@ button {
       }
       /// IMAGES FROM BONUS QUEST//////
       /////
-       if (check("feedback")) {
+       if (check("gallery:feedback")) {
            let hi = document.createElement('h1')
            hi.innerText = 'Images from bonus quests'
            hi.style.fontSize = "50px"
@@ -342,12 +343,15 @@ button {
           document.body.append(feedback)
           console.log('feedback 66b')
       }
-      if (check("extremelyhard")) {
+      if (check("gallery:extremelyhard")) {
+        for (var i = 0; i < 30; i++) {
+
           var imabutton = document.createElement('img')
           imabutton.src = "/hard/imabutton.png"
           imabutton.width="300"
           document.body.append(imabutton)
           console.log('our user IS A GOD!!!')
+        }
       }
 
 
@@ -355,7 +359,7 @@ button {
       /////
       ///shhh
 
-if (check("help")) {
+if (check("gallery:help")) {
            let hi = document.createElement('h1')
            hi.innerText = 'images from secret quests'
            hi.style.fontSize = "30px"
@@ -368,7 +372,7 @@ if (check("help")) {
           console.log('how can we help you')
       }
 
-      if (check("enter")) {
+      if (check("gallery:enter")) {
           var enter = document.createElement('img')
           enter.src = "/youpressedenter/duplicatefile.jpg"
           enter.style.width = "400px"
@@ -448,11 +452,42 @@ window.onclick = function(event) {
           }
       }
 
-      cat.onclick = () => {
+
+      document.onclick=function(e){
+        if (e.target.getAttribute('src') == '/dragonfly_eyeballs/cat.png' || e.target.classList.contains('kittycatkittycatkitty')) {
+
           console.log('wow')
           var audio = new Audio('gallerymedia/mew.mp3');
             audio.play();
             triggerSnackbar("Mew!")
+        }
+
+          if (e.target.getAttribute('src') == '/bruh/kanye-west.gif') {
+
+            console.log('bruh click')
+          var audio = new Audio('gallerymedia/bruh.mp3');
+            audio.play();
+
+            triggerSnackbar("bruh")
+          }
+          if (e.target.getAttribute('src') == '/CLICKIT/CRICKIT.png') {
+            handleCricket(e.target)
+          }
+
+            if (e.target.classList.contains('dog')) {
+
+          console.log('owof')
+          var audio = new Audio('gallerymedia/woof.mp3');
+            audio.play();
+            triggerSnackbar("WOOF WOOF WOOF WOOF WOOF")
+        }
+
+        if (e.target.getAttribute('src') == '/bruh/beluga-cat-meme-discord.gif') {
+
+          console.log('MLG')
+          var audio = new Audio('gallerymedia/mlg.mp3');
+            audio.play();
+        }
       }
 
       function triggerSnackbar(text) {
@@ -461,21 +496,21 @@ window.onclick = function(event) {
   // Get the snackbar DIV
   var x = document.getElementById("snackbar");
 
-  x.innerText = 'Mew!'
+  x.innerText = text
 
   // Add the "show" class to DIV
   x.classList.add("show")
 
   // After 3 seconds, remove the show class from DIV
-  setTimeout(function(){ x.classList.remove('show') }, 2000);
-} 
+  setTimeout(function(){ x.classList.remove('show') }, 5000);
+}
     function handleCricket(cricket) {
         console.log('crick', cricket)
-        cricket.addEventListener('click', function(){
+        // cricket.addEventListener('click', function(){
             console.log('crick crick')
         var audio = new Audio('gallerymedia/crickets.mp3')
         audio.play();
-        })
+        // })
     }
     </script>
   </body>

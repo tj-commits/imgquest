@@ -8,7 +8,7 @@ body {
 }
 
 .completed{
-    text-decoration: line-through;
+    text-decoration: line-through!important;
     color: black !important;
 }
 
@@ -17,7 +17,7 @@ sub{
     font-size: 15px;
 }
 .finished {
-    text-decoration: line-through;
+    text-decoration: line-through !important;
     color: black !important;
 }
 
@@ -36,7 +36,8 @@ a:not([href]) {
 }
 
 .green {
-    color: green
+    color: green;
+    text-decoration: none;
 }
 
 

@@ -7,6 +7,11 @@
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    
+    <script src="/ife/auralink.js"></script>
     <script src="/ife/client.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -42,8 +47,8 @@
           document.getElementById("bruh").remove()
           document.getElementById('b').style.display = "block"
     document.body.innerHTML += "<img src=\"kanye-west.gif\" alt=\"bruh\" width=100% height=200px><img src=\"beluga-cat-meme-discord.gif\" alt=\"bruh\" width=20% height=100px><h1 style=\"font-size:4em;text-align:center\">BRUH</h1>"
-    window.localStorage.setItem("gallery:bruhhh", "BRUUUUHHHHHHHHHHH");
-    window.localStorage.setItem("gallery:coolbeluga", "mhm")
+    window.CloudStorage.setItem("gallery:bruhhh", "BRUUUUHHHHHHHHHHH");
+    window.CloudStorage.setItem("gallery:coolbeluga", "mhm")
     new BruhSpam()
 
   }

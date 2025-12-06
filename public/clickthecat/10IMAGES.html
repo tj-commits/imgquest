@@ -4,7 +4,11 @@
     />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    
+    <script src="/ife/auralink.js"></script>
 <title>ImageQuest 10 NEW IMAGES!!!?!?!?!</title>
 
 <button onclick="location.assign('/gallery')">Go to gallery</button>
@@ -14,5 +18,5 @@
 <img src="/petimages/marty.jpg">
 <br>
 <script>
-  localStorage.setItem('gallery:thekittycollection', 'heck yea')
+ window.CloudStorage.setItem('gallery:thekittycollection', 'heck yea')
 </script>

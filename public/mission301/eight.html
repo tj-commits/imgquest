@@ -6,7 +6,11 @@
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <meta name="viewport" content="width=device-width,initial-scale=1.0" /><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
-
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    
+    <script src="/ife/auralink.js"></script>
     <script src="/ife/client.js"></script>
 <meta http-equiv="Expires" content="0" />
     <style>
@@ -20,7 +24,7 @@
     <img src="eight.jpeg">
     <button onclick="location.assign('/gallery')">go to gallery</button>
     <script>
-        window.localStorage.setItem('eight', 'mhm')
+        window.CloudStorage.setItem('eight', 'mhm')
     </script>
   </body>
 </html>

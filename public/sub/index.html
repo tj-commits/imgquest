@@ -2,7 +2,11 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
     <script src="/ife/client.js"></script>
-<meta http-equiv="Expires" content="0" />
+<meta http-equiv="Expires" content="0" /><script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    
+    <script src="/ife/auralink.js"></script>
 
 <h1>Subscribe</h1>
 <p>To complete this quest, please subscribe to my YouTube channel. Thank you.</p>
@@ -13,7 +17,7 @@
     var m = document.querySelector('#submsg')
     b.addEventListener('click', () => {
         window.open('https://www.youtube.com/@321sas?sub_confirmation=1')
-        localStorage.setItem('gallery:subbed', 'yes')
+       window.CloudStorage.setItem('gallery:subbed', 'yes')
         m.textContent = 'Thank you for subscribing! 1 new image unlocked'
         let img = document.createElement('img')
         img.src = '/sub/chanelbaner.jpg'

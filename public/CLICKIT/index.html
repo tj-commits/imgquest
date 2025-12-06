@@ -5,6 +5,11 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    
+    <script src="/ife/auralink.js"></script>
     <title>ImageQuest CLICKIT</title>
     <style>
         body {
@@ -28,10 +33,10 @@
   </head>
   <body style="background-image: url('/CLICKIT/CRICKIT.png'); background-blend-mode: multiply">
   <p><strong>CLICKIT</strong></p>
-  <button id="giveup" onclick="localStorage.setItem('gallery:crickit', 'mhm');localStorage.setItem('gallery:what', 'mhm');;location.assign('/CLICKIT/uwot.html')">i give up</button>
+  <button id="giveup" onclick="CloudStorage.setItem('gallery:crickit', 'mhm');CloudStorage.setItem('gallery:what', 'mhm');;location.assign('/CLICKIT/uwot.html')">i give up</button>
     <button
       id="mole"
-      onclick="localStorage.setItem('gallery:crickit', 'mhm');localStorage.setItem('gallery:what', 'mhm');location.assign('/CLICKIT/uwot.html')"
+      onclick="CloudStorage.setItem('gallery:crickit', 'mhm');CloudStorage.setItem('gallery:what', 'mhm');location.assign('/CLICKIT/uwot.html')"
     
     >
       <strong>CLICK ME</strong>

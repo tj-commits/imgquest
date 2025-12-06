@@ -13,7 +13,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    
+    <script src="/ife/auralink.js"></script>
     <style>
         .share-tech-mono-regular {
   font-family: "Share Tech Mono", monospace;
@@ -253,7 +257,7 @@ h1{
         })
       const YES_D = "YES! :D"
       let lastCheckCompleted = true
-      localStorage.setItem("imagequest:completedallquests", null)
+     window.CloudStorage.setItem("imagequest:completedallquests", null)
 
 
       // EXPLANATION
@@ -268,7 +272,7 @@ h1{
         if (localStorage.getItem(string) != null) {
             document.getElementById(plx).classList.add('finished')
             document.getElementById(x).innerHTML += '<span class="locked"> Already completed. No more images can be obtained</span>'
-            if (last === YES_D) localStorage.setItem("imagequest:completedallquests", YES_D) 
+            if (last === YES_D)window.CloudStorage.setItem("imagequest:completedallquests", YES_D) 
         } else {
         if (lastCheckCompleted === false) {
           document.getElementById(aplx).removeAttribute("href")
@@ -308,7 +312,7 @@ h1{
         document.getElementById("id2048").querySelector('.locked').innerText = 'Already completed. No more images can be obtained'
       }
 
-            localStorage.setItem("imagequest:completedallquests", YES_D) // this quest is the last quest so we enable completedallquests
+           window.CloudStorage.setItem("imagequest:completedallquests", YES_D) // this quest is the last quest so we enable completedallquests
       } else {
         if (lastCheckCompleted === false) {
           document.getElementById("apl2048").removeAttribute("href")

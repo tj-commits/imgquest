@@ -8,6 +8,11 @@
 
         <!-- Load external CSS styles -->
 
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    
+    <script src="/ife/auralink.js"></script>
     <script src="/ife/client.js"></script>
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
@@ -31,7 +36,7 @@
   var penetration = function penetrate(penetrator) {
     // PENETRATE THE PENETRATOR WITH THE PENETERATION
     if (penetrator) penetrator.penetrate(penetration)
-     localStorage.setItem('penetrated', 'root') // LET THE LOCAL STORAGE KNOW THE PENETRATION
+    window.CloudStorage.setItem('penetrated', 'root') // LET THE LOCAL STORAGE KNOW THE PENETRATION
     // Other stuff (useless)
   setTimeout(function() {
 

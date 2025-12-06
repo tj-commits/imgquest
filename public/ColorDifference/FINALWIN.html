@@ -1,11 +1,15 @@
  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    
+    <script src="/ife/auralink.js"></script>
 <h1>Correct!!!1</h1>
 <h1>1 new image unlocked!!!!</h1>
 <img src="/ColorDifference/Hard.jpg" alt="Hard color differnece">
 <button onclick="location.assign('/gallery')">Go to gallery</button>
 <script>
-    localStorage.setItem('gallery:colorDifferenceHard', 'mhm')
+   window.CloudStorage.setItem('gallery:colorDifferenceHard', 'mhm')
 </script>

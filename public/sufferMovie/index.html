@@ -3,7 +3,11 @@
 <meta http-equiv="Pragma" content="no-cache" />
     <script src="/ife/client.js"></script>
 <meta http-equiv="Expires" content="0" />
-
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    
+    <script src="/ife/auralink.js"></script>
 <h1>SUFFER</h1>
 <p>To complete this quest, please watch THE SUFFER MOVIE!</p>
 <button id="button">watch the movie</button>
@@ -13,7 +17,7 @@
     var m = document.querySelector('#submsg')
     b.addEventListener('click', () => {
         window.open('https://www.youtube.com/watch?v=K3nj0JyHf0A')
-        localStorage.setItem('gallery:suffer', 'yes')
+       window.CloudStorage.setItem('gallery:suffer', 'yes')
         m.textContent = 'Thanks for watching my movie. 1 new image unlocked!'
         let img = document.createElement('img')
         img.src = 'https://img.youtube.com/vi/K3nj0JyHf0A/maxresdefault.jpg'
